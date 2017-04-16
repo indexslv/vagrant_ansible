@@ -2,9 +2,9 @@
 
 ## About project
 This is demo / test project is for Vagrant and Ansible tools. You will be able to setup:
-1 x LoadBalancer HAProxy
-2 x Nginx + Tomcat + demo tomcat app (with reverse proxy)
-(TODO) 2 x PostgresSQL server master and slave with async database
+#### 1 x LoadBalancer HAProxy
+#### 2 x Nginx + Tomcat + demo tomcat app (with reverse proxy)
+#### (TODO) 2 x PostgresSQL server master and slave with async database
 
 
 ## Hardware Requirement:
