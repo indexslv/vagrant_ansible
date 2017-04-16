@@ -1,0 +1,28 @@
+- name: Loadbalancer | Installing Haproxy    
+  yum:
+    name: haproxy
+    state: latest
+
+- name: Loadbalancer | Enabling Services Haproxy
+  service:
+    name: haproxy
+    enabled: yes
+
+- name: Loadbalancer | Starting Haproxy
+  service:
+    name: haproxy
+    state: started
+
+- name: Loadbalancer | Copy Haproxy configuration files 
+  copy:
+    src: src/haproxy/
+    dest: /etc/haproxy/
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Loadbalancer | Restart 	
+  service:
+    name: haproxy
+    state: restarted

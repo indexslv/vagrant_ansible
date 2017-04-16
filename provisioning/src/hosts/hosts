@@ -1,0 +1,13 @@
+127.0.0.1       loadbalancer    loadbalancer
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+# Hosts file for all NODES
+# Loadbalancer
+10.10.20.111   node.bz lb lb.hode.bz loadbalancer cme.node.bz
+# Web servers
+10.10.20.121   web1 ame.node.bz
+10.10.20.122   web2 bme.node.bz
+# Database servers
+10.10.20.131   db1	db1.node.bz
+10.10.20.132   db2	db2.node.bz

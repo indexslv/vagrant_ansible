@@ -1,0 +1,35 @@
+- name: TOMCAT | Installing NGINX    
+  yum:
+    name: tomcat
+    state: latest
+
+- service:
+    name: tomcat
+    enabled: yes
+
+- name: TOMCAT | Starting NGINX
+  service:
+    name: tomcat
+    state: started
+
+- name: TOMCAT | Copy configuration files 
+  copy:
+    src: src/tomcat/
+    dest: /etc/tomcat/
+    owner: tomcat
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: TOMCAT | Copy WAR file 
+  copy:
+    src: src/tomcat_app/
+    dest: /var/lib/tomcat/webapps
+    owner: tomcat
+    group: tomcat
+    mode: 0644
+
+- name: TOMCAT | Restart 	
+  service:
+    name: tomcat
+    state: restarted

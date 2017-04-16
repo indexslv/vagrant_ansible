@@ -1,0 +1,32 @@
+- name: SeLinux | Allow to connect to http
+  command: sudo setsebool -P httpd_can_network_connect 1
+
+- name: NGINX | Installing   
+  yum:
+    name: nginx
+    state: latest
+
+- name: NGINX | Enabling Services
+  service:
+    name: nginx
+    enabled: yes
+
+- name: NGINX | Starting NGINX
+  service:
+    name: nginx
+    state: started
+
+- name: NGINX | Copy Nginx configuration files 
+  copy:
+    src: src/nginx/
+    dest: /etc/nginx/
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: NGINX | Restart 	
+  service:
+    name: nginx
+    state: restarted
+#    notify: nginx reload

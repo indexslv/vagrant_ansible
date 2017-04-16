@@ -1,0 +1,5 @@
+- hosts: loadbalancer
+  tasks:
+    - include: 'tasks/install_epel_release.yml'
+    - include: 'tasks/upload_hosts_file.yml'
+    - include: 'tasks/install_loadbalancer.yml'

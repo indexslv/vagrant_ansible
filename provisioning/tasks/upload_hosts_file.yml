@@ -1,0 +1,8 @@
+- name: NGINX | Copy Hosts file 
+  copy:
+    src: src/hosts/
+    dest: /etc/
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
