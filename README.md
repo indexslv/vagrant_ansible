@@ -19,7 +19,7 @@ This is demo / test project is for Vagrant and Ansible tools. You will be able t
 ###### [ Vagrant ] (https://www.vagrantup.com/)
 ###### [ Ansible ] (https://www.centos.org/)
 
-* I assume you have already installed Required OS and Software then skip to step X if not then install Cenots 7 minimal and start with step 1.
+* I assume you have already installed Required OS and Software then skip to step 2. if not then install Cenots 7 minimal and start with step 1. <br />
 
 **1. Project setup process:**<br />
 1.1. When installing centos 7 create user vagrant with administrator privilages <br />
@@ -31,7 +31,7 @@ chmod 0700 server_setup.sh
 ```
 * This script will install all nessasary software to run the Vagrant & Ansible project <br />
 
-**2. Running the project:**
+**2. Running the project:**<br />
 2.1. Before you start project please edit:<br />
 2.1.1. **hosts** file in direcotry "provisioning/src/hosts" and edit IP\`s you will use in you project. Edit only first part of IP, example "10.10.20.111" -> "10.20.30.111"<br />
 2.1.2. Copy edited content to you local **hosts** file /etc/hosts<br />
@@ -42,12 +42,12 @@ vagrant up
 ```
 and you will setup all server automaticly.<br />
 
-2.4. Stop all machines:
+2.4. Stop all machines:<br />
 ```
 vagrant halt
 ```
 
-2.4. Destory one or several machines:
+2.4. Destory one or several machines:<br />
 ```
 vagrant destroy web1
 vagrant destroy web1 web2 db1 db2
