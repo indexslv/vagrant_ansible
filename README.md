@@ -6,6 +6,7 @@ This is demo / test project is for Vagrant and Ansible tools. You will be able t
 #### 2 x Nginx + Tomcat + demo tomcat app (with reverse proxy)
 #### (TODO) 2 x PostgresSQL server master and slave with async database
 
+#### All above mentioned will use Centos 7 minimal "centos/7 CentOS Linux 7 x86_64 Vagrant Box" from [ Vagrant boxes Atlas ]  (https://atlas.hashicorp.com/boxes/search)
 
 ## Hardware Requirement:
 ###### PC or Laptop with virtualization
