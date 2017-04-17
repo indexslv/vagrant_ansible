@@ -1,5 +1,6 @@
 - name: SeLinux | Allow to connect to http
-  command: sudo setsebool -P httpd_can_network_connect 1
+  become: true
+  command: setsebool -P httpd_can_network_connect 1
 
 - name: NGINX | Installing   
   yum:
