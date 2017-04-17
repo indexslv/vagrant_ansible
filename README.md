@@ -44,7 +44,7 @@ Loadbalancer server Public network IP\`s: 10.10.20.111<br />
 Loadbalancer server Private network IP\`s: 192.168.56.11<br /><br />
 WEB servers Public network IP\`s: 10.10.20.121 - 122<br />
 WEB servers Private network IP\`s: 192.168.56.21 - 22<br /><br />
-Database servers Public IP\`s: 10.10.20.131 - 122<br />
+Database servers Public network IP\`s: 10.10.20.131 - 122<br />
 Database servers Private network IP\`s: 192.168.56.31 - 32<br /><br />
 
 2.1.2. **hosts** file in direcotry "provisioning/src/hosts" and edit IP\`s you will use in you project. Edit only first part of IP, example "10.10.20.111" -> "10.20.30.111"<br />
