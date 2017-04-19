@@ -1,0 +1,12 @@
+- name: Copy context.xml to SERVER B
+  template:
+    src: src/templates/tomcat/context.xml.j2
+    dest: /etc/tomcat/context.xml
+    owner: tomcat
+    group: tomcat
+    mode: 0644
+
+- name: TOMCAT | Do restart
+  service:
+    name: tomcat
+    state: restarted

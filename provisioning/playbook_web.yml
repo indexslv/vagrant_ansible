@@ -3,6 +3,22 @@
     - include: 'tasks/install_epel_release.yml'
     - include: 'tasks/upload_hosts_file.yml'
     - include: 'tasks/install_nginx.yml'
-    - yum: name=tomcat-webapps state=installed
-    - yum: name=tomcat-admin-webapps state=installed
+    - yum: 
+       name: tomcat-webapps
+       state: installed
+    - yum:
+       name: tomcat-admin-webapps
+       state: installed
     - include: 'tasks/install_tomcat.yml'
+
+- hosts: web1
+  vars:
+   - WebServerName: 'Server A'
+  tasks:
+    - include: 'tasks/setup_tomcat_server_A.yml'
+
+- hosts: web2
+  vars:
+   - WebServerName: 'Server B'
+  tasks:
+    - include: 'tasks/setup_tomcat_server_B.yml'

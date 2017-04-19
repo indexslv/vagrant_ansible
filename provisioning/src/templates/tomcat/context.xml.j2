@@ -20,7 +20,7 @@
 
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
-	<Environment name="serverName" type="java.lang.String" value="Server A" />
+	<Environment name="serverName" type="java.lang.String" value="{{WebServerName}}" />
 	<Environment name="hostHeader" type="java.lang.String" value="x-forwarded-for" />
 
     <!-- Uncomment this to disable session persistence across Tomcat restarts -->

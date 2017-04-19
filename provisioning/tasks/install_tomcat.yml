@@ -1,4 +1,4 @@
-- name: TOMCAT | Installing NGINX    
+- name: TOMCAT | Installing Tomcat    
   yum:
     name: tomcat
     state: latest
@@ -7,7 +7,7 @@
     name: tomcat
     enabled: yes
 
-- name: TOMCAT | Starting NGINX
+- name: TOMCAT | Starting Tomcat
   service:
     name: tomcat
     state: started
@@ -28,8 +28,3 @@
     owner: tomcat
     group: tomcat
     mode: 0644
-
-- name: TOMCAT | Restart 	
-  service:
-    name: tomcat
-    state: restarted
